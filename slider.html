@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- УДАЛИТЬ  ПЕРЕД РАЗМЕЩЕНИЕМ НА ADINDEX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="//adindex.ru/version3/bootstrap/css/bootstrap.css?v=1.06" rel="stylesheet">
+    <link href="//adindex.ru/version3/css/adindex3.css?v=1.06" rel="stylesheet">
+    <link href="//adindex.ru/version3/css/fancybox.css?v=1.06" rel="stylesheet">
+    <link href="//adindex.ru/version3/css/datapicker.css?v=1.06" rel="stylesheet">
+    <link href="//adindex.ru/version3/css/promo/style.css?v=1.06" rel="stylesheet">
+    <link href="//adindex.ru/version3/css/adstyles/added_styles.css?v=1.06" rel="stylesheet">
+    <!-- /УДАЛИТЬ  ПЕРЕД РАЗМЕЩЕНИЕМ НА ADINDEX -->
+
+
+
+
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link href="css/style.css?4" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <div class="selfie-slider">
+        <div class="selfie-slider__item"><img src="img/sa/slider-1.jpg" alt=""></div>
+        <div class="selfie-slider__item"><img src="img/sa/slider-2.jpg" alt=""></div>
+        <div class="selfie-slider__item"><img src="img/sa/slider-3.jpg" alt=""></div>
+        <div class="selfie-slider__item"><img src="img/sa/slider-4.jpg" alt=""></div>
+    </div>
+
+    <script>
+        $(function(){
+            $('.selfie-slider').slick({
+                slidesToShow: 1,
+                prevArrow: '<button class="selfie-slider__arrow selfie-slider__arrow_left"></button>',
+                nextArrow: '<button class="selfie-slider__arrow selfie-slider__arrow_right"></button>',
+            });
+
+            $('.js-selfie-uncollapse').on('click', function(event) {
+                event.preventDefault();
+                var btn = $(this);
+                var item = btn.closest('.selfie-cases__item');
+                var block = item.find('.selfie-cases__item-in');
+                block.toggleClass('selfie-cases__item-in_collapsed');
+                btn.toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
